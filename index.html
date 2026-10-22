@@ -3,149 +3,196 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0d1512">
-<meta name="description" content="Darren Foote — Data Analyst & Business Analyst. Python, SQL, Power BI, Salesforce CRM, data automation. Portfolio: JobLens (evidence-first job posting audit), Switchboard, Omnirouter, Laya. UMBC Information Systems, 2026.">
-<meta property="og:title" content="Darren Foote — Data Analyst | Portfolio">
-<meta property="og:description" content="I turn messy data into decisions people can check. Featured project: JobLens — an evidence-first audit of whether job postings are still real.">
+<meta name="theme-color" content="#0a0f0d">
+<meta name="description" content="Darren Foote — Data Analyst & Business Analyst. The receipts portfolio: run a real JobLens audit yourself, read the dated receipts behind every project. Python, SQL, Power BI, Salesforce CRM. UMBC Information Systems 2026.">
+<meta property="og:title" content="Darren Foote — The Receipts Portfolio">
+<meta property="og:description" content="Don't take my word for it. Run the audit, read the receipts. Data Analyst | Python · SQL · Power BI · Salesforce CRM">
 <meta property="og:type" content="website">
-<title>Darren Foote — Data Analyst & Business Analyst | Portfolio</title>
+<title>Darren Foote — Data Analyst | The Receipts Portfolio</title>
 <style>
-:root{color-scheme:dark;--bg:#0d1512;--card:#16211c;--card2:#141f1a;--ink:#e9f2ec;--muted:#93a89b;--faint:#84998c;--border:#2a3a32;--accent:#63c78d;--accent2:#4eae7d;--deep:#2f7d54}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
-a{color:var(--accent)}a:hover{text-decoration:underline}
-.wrap{max-width:1020px;margin:0 auto;padding:0 22px 80px}
-header{padding:64px 0 10px}
-.eyebrow{font-size:11px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:var(--accent2)}
-h1{font-size:clamp(38px,6vw,62px);letter-spacing:-2.2px;line-height:1.05;margin:12px 0 6px;font-weight:850}
+:root{color-scheme:dark;--bg:#0a0f0d;--panel:#101713;--panel2:#0d130f;--ink:#e9f2ec;--muted:#93a89b;--faint:#7d9284;--border:#243329;--acc:#63c78d;--acc2:#4eae7d;--deep:#2f7d54;--amber:#eecf89;--red:#eda894;--mono:ui-monospace,"SF Mono",SFMono-Regular,Consolas,monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
+a{color:var(--acc)}a:hover{text-decoration:underline}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px 90px}
+.topbar{position:sticky;top:0;z-index:5;background:rgba(10,15,13,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;padding:12px 22px;font-family:var(--mono);font-size:12px}
+.topbar .brand{font-weight:700;letter-spacing:1px}
+.topbar .brand b{color:var(--acc)}
+.topbar nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+.topbar nav a:hover{color:var(--ink)}
+#clock{color:var(--faint)}
+header{padding:70px 0 8px}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--acc2)}
+h1{font-size:clamp(40px,6.4vw,66px);letter-spacing:-2.4px;line-height:1.04;margin:12px 0 8px;font-weight:850}
 .role{font-size:clamp(16px,2.4vw,21px);color:var(--muted);font-weight:600;margin:0 0 20px}
-.lede{font-size:17px;max-width:720px;color:#c6d6cc;margin:0 0 26px}
+.lede{font-size:17px;max-width:740px;color:#c6d6cc;margin:0 0 28px}
 .lede strong{color:var(--ink)}
-.links{display:flex;gap:10px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border-radius:10px;border:1px solid #33463b;background:#1a2921;color:var(--ink);font-weight:700;font-size:13px;text-decoration:none}
-.btn:hover{background:#22352a;text-decoration:none}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border-radius:10px;border:1px solid #33463b;background:#16211a;color:var(--ink);font-weight:700;font-size:13px;text-decoration:none;cursor:pointer;font-family:inherit}
+.btn:hover{background:#1f3125;text-decoration:none}
 .btn.primary{background:var(--deep);border-color:var(--deep);color:#fff}
 .btn.primary:hover{background:#379567}
-h2{font-size:13px;letter-spacing:1.8px;text-transform:uppercase;color:var(--accent2);margin:56px 0 16px;font-weight:800}
-.card{background:var(--card2);border:1px solid var(--border);border-radius:16px;padding:26px 28px}
-.featured{border-color:#26503a;background:linear-gradient(180deg,#173325,#141f1a)}
-.card h3{margin:0 0 6px;font-size:24px;letter-spacing:-.6px}
-.card h3 a{color:var(--ink);text-decoration:none}.card h3 a:hover{color:var(--accent)}
-.tagline{color:var(--accent);font-weight:700;margin:0 0 10px}
-.card p{color:#b9cabd;margin:0 0 12px;font-size:15px}
-.meta{font-size:12px;color:var(--faint)}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.counters{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:38px 0 6px}
+@media(max-width:720px){.counters{grid-template-columns:repeat(2,1fr)}}
+.counter{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px 18px}
+.counter .n{font-size:32px;font-weight:830;letter-spacing:-1px;line-height:1.15}
+.counter .c{font-size:11px;color:var(--muted);font-weight:650;line-height:1.45}
+h2{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--acc2);margin:60px 0 8px;font-weight:800}
+.sub{color:var(--muted);font-size:14px;margin:0 0 18px;max-width:760px}
+.pickrow{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+@media(max-width:820px){.pickrow{grid-template-columns:1fr}}
+.pick{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px 18px;text-align:left;color:var(--ink);cursor:pointer;font-family:inherit;width:100%}
+.pick:hover{border-color:var(--acc2)}
+.pick.sel{border-color:var(--acc);background:#14231a}
+.pick .t{font-weight:780;font-size:15px;display:block}
+.pick .e{color:var(--muted);font-size:12.5px;display:block;margin:3px 0 8px}
+.pick .hint{font-family:var(--mono);font-size:11px;color:var(--acc)}
+.console{background:#070a08;border:1px solid var(--border);border-radius:16px;padding:20px 22px;font-family:var(--mono);font-size:13px;min-height:300px;position:relative;overflow:hidden}
+.console .chead{display:flex;justify-content:space-between;color:var(--faint);font-size:11px;letter-spacing:1.4px;text-transform:uppercase;border-bottom:1px dashed #223129;padding-bottom:10px;margin-bottom:14px}
+.logline{margin:0 0 10px;color:#b9cabd;opacity:0;transform:translateY(4px);transition:opacity .3s,transform .3s}
+.logline.on{opacity:1;transform:none}
+.logline .k{color:var(--acc)}
+.logline .who{color:var(--faint)}
+.logline a{color:#6fc493;word-break:break-all}
+.stamp{display:none;margin-top:16px;padding:14px 16px;border-radius:10px;font-weight:800;letter-spacing:.6px;font-size:14px;text-align:center}
+.stamp.on{display:block;animation:stampin .35s ease-out}
+@keyframes stampin{from{transform:scale(1.12);opacity:0}to{transform:scale(1);opacity:1}}
+.stamp.green{border:1.5px solid var(--acc2);color:#7ed6a5;background:rgba(47,125,84,.14)}
+.stamp.amber{border:1.5px solid #8a6d2f;color:var(--amber);background:rgba(238,207,137,.08)}
+.stamp.red{border:1.5px solid #7c463a;color:var(--red);background:rgba(237,168,148,.08)}
+.cursor{display:inline-block;width:8px;height:15px;background:var(--acc);vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.idle{color:var(--faint)}
+.receipts{background:var(--panel2);border:1px solid var(--border);border-radius:16px;padding:8px 24px}
+.rrow{display:flex;gap:16px;padding:13px 0;border-bottom:1px solid #1c2921;font-size:14px}
+.rrow:last-child{border-bottom:0}
+.rrow .d{font-family:var(--mono);font-size:11.5px;color:var(--faint);white-space:nowrap;padding-top:3px;min-width:64px}
+.rrow .x{color:#c6d6cc}
+.rrow .x b{color:var(--ink)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 @media(max-width:720px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:22px 24px}
+.card h3{margin:0 0 6px;font-size:19px;letter-spacing:-.4px}
+.card p{color:#b9cabd;margin:0 0 10px;font-size:14.5px}
+.card .meta{font-size:12px;color:var(--faint);margin:0}
 .status{display:inline-block;font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;padding:4px 9px;border-radius:20px;border:1px solid #33463b;color:#a7bab0;margin-bottom:10px}
 .status.live{color:#7ed6a5;border-color:#26503a;background:#143527}
-table{border-collapse:collapse;width:100%;margin:14px 0 6px;font-size:14px}
-td,th{border-bottom:1px solid #24352c;padding:8px 10px;text-align:left}
-th{color:var(--faint);font-size:11px;text-transform:uppercase;letter-spacing:1.2px}
 .skills{display:flex;flex-wrap:wrap;gap:8px}
-.chip{border:1px solid #33463b;background:#1a2921;border-radius:24px;padding:7px 13px;font-size:13px;font-weight:600;color:#cfe3d6}
-.exp h3{font-size:18px}
-.exp .meta{margin-bottom:8px}
-footer{margin-top:64px;border-top:1px solid #26362e;padding-top:22px;color:var(--faint);font-size:13px}
+.chip{border:1px solid #33463b;background:#16211a;border-radius:24px;padding:7px 13px;font-size:13px;font-weight:600;color:#cfe3d6}
+.plain{font-size:14.5px;color:#b9cabd}
+.plain a{font-weight:700}
+footer{margin-top:70px;border-top:1px solid var(--border);padding-top:22px;color:var(--faint);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 </style>
 </head>
 <body>
+<div class="topbar"><span class="brand">DF<b>//</b>RECEIPTS</span><nav><a href="#audit">Run an audit</a><a href="#receipts">Receipts</a><a href="#projects">Projects</a><a href="v1.html">Plain version</a></nav><span id="clock"></span></div>
 <div class="wrap">
 <header>
   <div class="eyebrow">Portfolio · Owings Mills, Maryland</div>
   <h1>Darren Foote</h1>
   <p class="role">Data Analyst | Business Analyst | Python · SQL · Power BI · Salesforce CRM</p>
-  <p class="lede"><strong>In one breath:</strong> I turn messy data into decisions people can check. At Constellation Energy I built Salesforce/CRM reporting and Python/SQL automation; on my own time I build evidence-first tools — software that shows its sources and says "unverified" when that's the honest answer.</p>
-  <div class="links">
-    <a class="btn primary" href="https://www.linkedin.com/in/darren-foote-jr/">LinkedIn</a>
+  <p class="lede"><strong>Don't take my word for anything on this page.</strong> I build evidence-first tools — software that shows its sources and says "unverified" when that's the honest answer. Below, you can run a real audit yourself and read the dated receipts behind every project. At Constellation Energy I did Salesforce/CRM reporting and Python/SQL automation; this page is the same habit, turned on my own work.</p>
+  <div class="btns">
+    <a class="btn primary" href="#audit">▶ Run a real audit</a>
+    <a class="btn" href="https://www.linkedin.com/in/darren-foote-jr/">LinkedIn</a>
     <a class="btn" href="https://github.com/Darren-dev141">GitHub</a>
-    <a class="btn" href="https://darren-dev141.github.io/joblens/">Featured demo: JobLens</a>
+  </div>
+  <div class="counters">
+    <div class="counter"><div class="n">10</div><div class="c">Job postings audited in the JobLens pilot (Oct 22, 2026)</div></div>
+    <div class="counter"><div class="n">2</div><div class="c">Had a confirmed employer apply link. One was already expired.</div></div>
+    <div class="counter"><div class="n">5/10</div><div class="c">Independently re-reviewed by a second checker</div></div>
+    <div class="counter"><div class="n">4</div><div class="c">Unverifiable either way — reported as unverified, not "fake"</div></div>
   </div>
 </header>
 
-<h2>Featured project</h2>
-<div class="card featured">
-  <span class="status live">Live demo</span>
-  <h3><a href="https://darren-dev141.github.io/joblens/">JobLens — is this job posting still real?</a></h3>
-  <p class="tagline">An evidence-first audit of job postings.</p>
-  <p>JobLens follows each listing back to the employer's own careers site and records what it finds — a working apply link, an expired post, or an honest "couldn't verify." Every claim in the dashboard opens its source; half the pilot sample was independently re-reviewed.</p>
-  <table>
-    <tr><th>Pilot result (10 postings, Oct 2026)</th><th>Count</th></tr>
-    <tr><td>Employer apply link confirmed</td><td>2</td></tr>
-    <tr><td>Already expired on the board</td><td>1</td></tr>
-    <tr><td>Unverifiable either way — reported as unverified</td><td>4</td></tr>
-  </table>
-  <p class="meta">Python · Data validation · HTML/CSS/JavaScript · CSV export · Works offline, zero dependencies</p>
-  <div class="links">
-    <a class="btn primary" href="https://darren-dev141.github.io/joblens/">Open the live demo</a>
-    <a class="btn" href="https://github.com/Darren-dev141/joblens">Code + methodology</a>
-  </div>
+<h2 id="audit">Run a real audit</h2>
+<p class="sub">This is JobLens, live in your browser. Pick a real posting from the pilot and watch the audit replay its actual evidence — the same records, observers and findings as the full study. Then it stamps the classification the evidence earns. Nothing here is staged: one of these ends in "unverified," because that was the truth.</p>
+<div class="pickrow">
+  <button class="pick" data-audit="J001"><span class="t">GIS Analyst</span><span class="e">Blue Raster · Arlington, VA / remote · listed 1 week</span><span class="hint">RUN AUDIT →</span></button>
+  <button class="pick" data-audit="J004"><span class="t">Program Analyst IV</span><span class="e">Cherokee Federal · Rosslyn, VA · listed 1 day</span><span class="hint">RUN AUDIT →</span></button>
+  <button class="pick" data-audit="J007"><span class="t">Junior Business Analyst</span><span class="e">Robertson, Anschutz, Schneid, Crane &amp; Partners · Hunt Valley · listed 2 months</span><span class="hint">RUN AUDIT →</span></button>
+</div>
+<div class="console" id="console">
+  <div class="chead"><span>JobLens · audit replay</span><span id="cstate">idle</span></div>
+  <div id="log"><p class="idle">Pick a posting above. The audit follows it from the job board to the employer's own site and writes down what it finds.<span class="cursor"></span></p></div>
+  <div class="stamp" id="stamp"></div>
+</div>
+<p class="sub" style="margin-top:14px">The full study — all 10 postings, filters, CSV export — is the <a href="https://darren-dev141.github.io/joblens/">live JobLens dashboard</a>. Code and methodology: <a href="https://github.com/Darren-dev141/joblens">github.com/Darren-dev141/joblens</a>.</p>
+
+<h2 id="receipts">Receipts, not adjectives</h2>
+<p class="sub">Every line is dated and checkable. This is how my systems report their own work — including the unflattering lines.</p>
+<div class="receipts">
+  <div class="rrow"><span class="d">OCT 22</span><span class="x"><b>JobLens v1.1 shipped</b> — standalone dashboard + 10-record dataset; a second reviewer re-checked 5 of 10 rows against the original sources.</span></div>
+  <div class="rrow"><span class="d">OCT 22</span><span class="x"><b>JobLens verified three ways</b> — source-level QA, an independent execution test of the shipped app (10/10 records), and a real-browser render check of the public demo.</span></div>
+  <div class="rrow"><span class="d">OCT 22</span><span class="x"><b>Omnirouter receipt log: 637 requests</b> — every AI request through my local router is logged with the model that served it and any fallback.</span></div>
+  <div class="rrow"><span class="d">OCT 21</span><span class="x"><b>Laya benchmark, published whole</b> — my decision engine reproduces the calls I accepted at 96.5% agreement; where I rejected its calls, it re-asserts the same side 96.5% of the time. That divergence is printed in its own report, not buried.</span></div>
+  <div class="rrow"><span class="d">OCT 18</span><span class="x"><b>Switchboard engineer test: fully green</b> — the end-to-end keyed test battery passed every part, including the approval gates and a kill drill.</span></div>
+  <div class="rrow"><span class="d">OCT 18</span><span class="x"><b>Omnirouter v2.2 live</b> — one local gateway speaking three API dialects, with a receipt for every request.</span></div>
 </div>
 
-<h2>More projects</h2>
+<h2 id="projects">Projects</h2>
 <div class="grid">
-  <div class="card">
-    <span class="status">In active development</span>
-    <h3>Switchboard</h3>
-    <p>A central router for AI-agent work: tasks, approvals and receipts in one place, so every automated action leaves a trail a human can audit. Passed a fully keyed end-to-end engineer test (all suites green).</p>
-    <p class="meta">Systems design · APIs · Test harnesses</p>
-  </div>
-  <div class="card">
-    <span class="status live">Running locally</span>
-    <h3>Omnirouter</h3>
-    <p>A local gateway that routes AI requests across model providers with per-request receipts — which model answered, what it cost, what fell back and why. Built to keep working when any single provider caps out.</p>
-    <p class="meta">Python · API integration · Observability</p>
-  </div>
-  <div class="card">
-    <span class="status live">Running locally</span>
-    <h3>Laya</h3>
-    <p>A local decision engine for classification and ranking tasks, with calibration checks against human judgment. Benchmarked honestly: strong where its picks match human calls, and measured — not hidden — where it diverges.</p>
-    <p class="meta">Python · Decision systems · Evaluation</p>
-  </div>
-  <div class="card">
-    <span class="status">Open source</span>
-    <h3>Agent Action Auditor</h3>
-    <p>An open-source tool that reviews what AI agents actually did — actions, approvals, side effects — against what they were asked to do. Entered in the GitLab Transcend hackathon.</p>
-    <p class="meta">Python · Auditing · Open source</p>
-  </div>
-</div>
-
-<h2>Earlier projects</h2>
-<div class="card">
-  <p style="margin:0">
-    <a href="https://github.com/Darren-dev141/digit-recognizer-android"><strong>digit-recognizer-android</strong></a> — on-device handwritten digit recognition (TensorFlow Lite)<br>
-    <a href="https://github.com/Darren-dev141/face-censor"><strong>face-censor</strong></a> — face detection and censoring in video (OpenCV, PyQt6)<br>
-    <a href="https://github.com/Darren-dev141/nlp-chatbot"><strong>nlp-chatbot</strong></a> — TF-IDF question-answering chatbot (NLTK, scikit-learn)<br>
-    <a href="https://github.com/Darren-dev141/news-search"><strong>news-search</strong></a> — command-line article search (NewsAPI)<br>
-    <a href="https://github.com/Darren-dev141/stock-dashboard"><strong>stock-dashboard</strong></a> — Yahoo Finance downloader with a Streamlit dashboard
-  </p>
+  <div class="card"><span class="status live">Live demo</span><h3>JobLens</h3><p>Checks whether a job posting is still real, and proves it either way — or says it can't. You just ran it.</p><p class="meta">Python · Data validation · HTML/CSS/JavaScript · <a href="https://github.com/Darren-dev141/joblens">Code</a></p></div>
+  <div class="card"><span class="status">In active development</span><h3>Switchboard</h3><p>A central router for AI-agent work: tasks, approvals and receipts in one place, so every automated action leaves a trail a human can audit.</p><p class="meta">Systems design · APIs · Test harnesses</p></div>
+  <div class="card"><span class="status live">Running locally</span><h3>Omnirouter</h3><p>A local gateway that routes AI requests across providers with a receipt per request — which model answered, what fell back, and why.</p><p class="meta">Python · API integration · Observability</p></div>
+  <div class="card"><span class="status live">Running locally</span><h3>Laya</h3><p>A local decision engine for classification and ranking, calibrated against human judgment — with its disagreements measured and published.</p><p class="meta">Python · Decision systems · Evaluation</p></div>
+  <div class="card"><span class="status">Open source</span><h3>Agent Action Auditor</h3><p>Reviews what AI agents actually did — actions, approvals, side effects — against what they were asked to do. GitLab Transcend hackathon entry.</p><p class="meta">Python · Auditing · Open source</p></div>
+  <div class="card"><span class="status">Earlier work</span><h3>Foundations</h3><p class="plain"><a href="https://github.com/Darren-dev141/digit-recognizer-android">digit-recognizer-android</a> (TensorFlow Lite) · <a href="https://github.com/Darren-dev141/face-censor">face-censor</a> (OpenCV) · <a href="https://github.com/Darren-dev141/nlp-chatbot">nlp-chatbot</a> (NLTK) · <a href="https://github.com/Darren-dev141/news-search">news-search</a> · <a href="https://github.com/Darren-dev141/stock-dashboard">stock-dashboard</a> (Streamlit)</p></div>
 </div>
 
 <h2>Skills</h2>
 <div class="skills">
-  <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Power BI</span><span class="chip">Salesforce CRM</span>
-  <span class="chip">Data Analysis</span><span class="chip">Data Validation</span><span class="chip">Data Automation</span>
-  <span class="chip">Excel</span><span class="chip">HTML / CSS / JavaScript</span><span class="chip">Dashboard Design</span>
-  <span class="chip">Business Analysis</span><span class="chip">CRM Reporting</span><span class="chip">Technical Writing</span>
+  <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Power BI</span><span class="chip">Salesforce CRM</span><span class="chip">Data Analysis</span><span class="chip">Data Validation</span><span class="chip">Data Automation</span><span class="chip">Excel</span><span class="chip">HTML / CSS / JavaScript</span><span class="chip">Dashboard Design</span><span class="chip">Business Analysis</span><span class="chip">CRM Reporting</span><span class="chip">Technical Writing</span>
 </div>
 
-<h2>Experience</h2>
-<div class="card exp">
+<h2>Experience &amp; education</h2>
+<div class="card">
   <h3>Constellation Energy</h3>
-  <p class="meta">Business Development Specialist (contract) · Quantitative Analytics Intern</p>
-  <p>Salesforce/CRM data work, reporting, and Python/SQL automation supporting business development and quantitative analytics teams.</p>
-  <h3 style="margin-top:20px">Customer operations</h3>
-  <p class="meta">Walmart · Target · Chick-fil-A</p>
-  <p>Front-line customer service — the habit of explaining things plainly started here.</p>
-</div>
-
-<h2>Education</h2>
-<div class="card exp">
-  <h3>University of Maryland, Baltimore County (UMBC)</h3>
-  <p class="meta">B.S. Information Systems, May 2026</p>
+  <p><b>Business Development Specialist</b> (contract) · <b>Quantitative Analytics Intern</b> — Salesforce/CRM data work, reporting, and Python/SQL automation.</p>
+  <h3 style="margin-top:18px">UMBC</h3>
+  <p>B.S. Information Systems, May 2026. Earlier: customer operations at Walmart, Target and Chick-fil-A — where the habit of explaining things plainly started.</p>
 </div>
 
 <footer>
-  Built and maintained by Darren Foote · Code: <a href="https://github.com/Darren-dev141">github.com/Darren-dev141</a> · Connect: <a href="https://www.linkedin.com/in/darren-foote-jr/">linkedin.com/in/darren-foote-jr</a>
+  <span>© 2026 Darren Foote · Built as a single static page — view source, it's all here.</span>
+  <span><a href="https://github.com/Darren-dev141">GitHub</a> · <a href="https://www.linkedin.com/in/darren-foote-jr/">LinkedIn</a> · <a href="v1.html">Plain version</a></span>
 </footer>
 </div>
+<script>
+const AUDITS = {
+J001:{stamp:["EMPLOYER APPLY LINK — CONFIRMED","green"],steps:[
+ ["BOARD","Posting captured on HiringCafe — GIS Analyst at Blue Raster, ranked search result.","collector · Oct 22, 2026","https://hiringcafe.com/job/gis-analyst-blue-raster-arlington-virginia-zv90buavwz8efv49"],
+ ["EMPLOYER CHECK","Followed it to the employer's own site: Blue Raster lists GIS Analyst as an open position and links its Workable requisition C859721CC7.","independent auditor · Oct 22, 2026","https://blueraster.jobs/apply"]]},
+J004:{stamp:["UNVERIFIED — EMPLOYER STATUS NOT CONFIRMED","amber"],steps:[
+ ["BOARD","Posting captured on HiringCafe — Program Analyst IV at Cherokee Federal, matching role.","collector · Oct 22, 2026","https://hiringcafe.com/job/program-analyst-iv-cherokee-federal-rosslyn-virginia-l1wdg2oxc7kskt36"],
+ ["THIRD PARTY","A second board (ClearanceJobs) shows the same requisition OPS115 live — but that's another board's word, not the employer's.","independent auditor · Oct 22, 2026","https://www.clearancejobs.com/jobs/9251889/program-analyst-iv"],
+ ["EMPLOYER CHECK","The employer's own Oracle careers portal never finished rendering, so the apply path could not be confirmed at the source.","independent auditor · Oct 22, 2026",null],
+ ["RULE","A live third-party listing does not upgrade this to confirmed. It stays unverified — that discipline is the product.",null,null]]},
+J007:{stamp:["EXPIRED — THE BOARD ITSELF SAYS SO","red"],steps:[
+ ["BOARD","Posting captured on HiringCafe — Junior Business Analyst. Flag: two near-identical ads, and no unique requisition ID could be established.","collector · Oct 22, 2026","https://hiringcafe.com/job/junior-business-analyst-robertson-anschutz-schneid-crane-and-partners-2nhr4l6hvxcc0r0p"],
+ ["RECHECK 1","First ad carries an explicit banner: expired, not accepting applications.","independent auditor · Oct 22, 2026","https://hiringcafe.com/job/junior-business-analyst-robertson-anschutz-schneid-crane-and-partners-2nhr4l6hvxcc0r0p"],
+ ["RECHECK 2","Second ad: also expired. Possibly the same vacancy — but duplication is not claimed without requisition IDs.","independent auditor · Oct 22, 2026","https://hiringcafe.com/job/junior-business-analyst-robertson-anschutz-schneid-crane-and-partners-n7pvhdx5r1u1mmhq"]]}
+};
+const log=document.getElementById('log'),stamp=document.getElementById('stamp'),cstate=document.getElementById('cstate');
+let running=false;
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+async function runAudit(id){
+  if(running)return; running=true;
+  document.querySelectorAll('.pick').forEach(p=>p.classList.toggle('sel',p.dataset.audit===id));
+  const a=AUDITS[id]; log.innerHTML=''; stamp.className='stamp'; stamp.textContent=''; cstate.textContent='auditing…';
+  for(const [k,d,who,url] of a.steps){
+    const p=document.createElement('p'); p.className='logline';
+    p.innerHTML='<span class="k">'+k+'</span> — '+d+(who?' <span class="who">['+who+']</span>':'')+(url?' <a href="'+url+'" target="_blank" rel="noopener">source ↗</a>':'');
+    log.appendChild(p); requestAnimationFrame(()=>p.classList.add('on'));
+    await sleep(1150);
+  }
+  stamp.textContent='⬢ '+a.stamp[0]; stamp.classList.add('on',a.stamp[1]);
+  cstate.textContent='complete · evidence on record'; running=false;
+}
+document.querySelectorAll('.pick').forEach(p=>p.addEventListener('click',()=>runAudit(p.dataset.audit)));
+const clock=document.getElementById('clock');
+function tick(){clock.textContent=new Date().toLocaleTimeString('en-US',{hour12:false,timeZone:'America/New_York'})+' ET';}
+tick(); setInterval(tick,1000);
+</script>
 </body>
 </html>
