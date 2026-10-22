@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0d1512">
+<meta name="description" content="Darren Foote — Data Analyst & Business Analyst. Python, SQL, Power BI, Salesforce CRM, data automation. Portfolio: JobLens (evidence-first job posting audit), Switchboard, Omnirouter, Laya. UMBC Information Systems, 2026.">
+<meta property="og:title" content="Darren Foote — Data Analyst | Portfolio">
+<meta property="og:description" content="I turn messy data into decisions people can check. Featured project: JobLens — an evidence-first audit of whether job postings are still real.">
+<meta property="og:type" content="website">
+<title>Darren Foote — Data Analyst & Business Analyst | Portfolio</title>
+<style>
+:root{color-scheme:dark;--bg:#0d1512;--card:#16211c;--card2:#141f1a;--ink:#e9f2ec;--muted:#93a89b;--faint:#84998c;--border:#2a3a32;--accent:#63c78d;--accent2:#4eae7d;--deep:#2f7d54}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
+a{color:var(--accent)}a:hover{text-decoration:underline}
+.wrap{max-width:1020px;margin:0 auto;padding:0 22px 80px}
+header{padding:64px 0 10px}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:var(--accent2)}
+h1{font-size:clamp(38px,6vw,62px);letter-spacing:-2.2px;line-height:1.05;margin:12px 0 6px;font-weight:850}
+.role{font-size:clamp(16px,2.4vw,21px);color:var(--muted);font-weight:600;margin:0 0 20px}
+.lede{font-size:17px;max-width:720px;color:#c6d6cc;margin:0 0 26px}
+.lede strong{color:var(--ink)}
+.links{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border-radius:10px;border:1px solid #33463b;background:#1a2921;color:var(--ink);font-weight:700;font-size:13px;text-decoration:none}
+.btn:hover{background:#22352a;text-decoration:none}
+.btn.primary{background:var(--deep);border-color:var(--deep);color:#fff}
+.btn.primary:hover{background:#379567}
+h2{font-size:13px;letter-spacing:1.8px;text-transform:uppercase;color:var(--accent2);margin:56px 0 16px;font-weight:800}
+.card{background:var(--card2);border:1px solid var(--border);border-radius:16px;padding:26px 28px}
+.featured{border-color:#26503a;background:linear-gradient(180deg,#173325,#141f1a)}
+.card h3{margin:0 0 6px;font-size:24px;letter-spacing:-.6px}
+.card h3 a{color:var(--ink);text-decoration:none}.card h3 a:hover{color:var(--accent)}
+.tagline{color:var(--accent);font-weight:700;margin:0 0 10px}
+.card p{color:#b9cabd;margin:0 0 12px;font-size:15px}
+.meta{font-size:12px;color:var(--faint)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:720px){.grid{grid-template-columns:1fr}}
+.status{display:inline-block;font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;padding:4px 9px;border-radius:20px;border:1px solid #33463b;color:#a7bab0;margin-bottom:10px}
+.status.live{color:#7ed6a5;border-color:#26503a;background:#143527}
+table{border-collapse:collapse;width:100%;margin:14px 0 6px;font-size:14px}
+td,th{border-bottom:1px solid #24352c;padding:8px 10px;text-align:left}
+th{color:var(--faint);font-size:11px;text-transform:uppercase;letter-spacing:1.2px}
+.skills{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid #33463b;background:#1a2921;border-radius:24px;padding:7px 13px;font-size:13px;font-weight:600;color:#cfe3d6}
+.exp h3{font-size:18px}
+.exp .meta{margin-bottom:8px}
+footer{margin-top:64px;border-top:1px solid #26362e;padding-top:22px;color:var(--faint);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">Portfolio · Owings Mills, Maryland</div>
+  <h1>Darren Foote</h1>
+  <p class="role">Data Analyst | Business Analyst | Python · SQL · Power BI · Salesforce CRM</p>
+  <p class="lede"><strong>In one breath:</strong> I turn messy data into decisions people can check. At Constellation Energy I built Salesforce/CRM reporting and Python/SQL automation; on my own time I build evidence-first tools — software that shows its sources and says "unverified" when that's the honest answer.</p>
+  <div class="links">
+    <a class="btn primary" href="https://www.linkedin.com/in/darren-foote-jr/">LinkedIn</a>
+    <a class="btn" href="https://github.com/Darren-dev141">GitHub</a>
+    <a class="btn" href="https://darren-dev141.github.io/joblens/">Featured demo: JobLens</a>
+  </div>
+</header>
+
+<h2>Featured project</h2>
+<div class="card featured">
+  <span class="status live">Live demo</span>
+  <h3><a href="https://darren-dev141.github.io/joblens/">JobLens — is this job posting still real?</a></h3>
+  <p class="tagline">An evidence-first audit of job postings.</p>
+  <p>JobLens follows each listing back to the employer's own careers site and records what it finds — a working apply link, an expired post, or an honest "couldn't verify." Every claim in the dashboard opens its source; half the pilot sample was independently re-reviewed.</p>
+  <table>
+    <tr><th>Pilot result (10 postings, Oct 2026)</th><th>Count</th></tr>
+    <tr><td>Employer apply link confirmed</td><td>2</td></tr>
+    <tr><td>Already expired on the board</td><td>1</td></tr>
+    <tr><td>Unverifiable either way — reported as unverified</td><td>4</td></tr>
+  </table>
+  <p class="meta">Python · Data validation · HTML/CSS/JavaScript · CSV export · Works offline, zero dependencies</p>
+  <div class="links">
+    <a class="btn primary" href="https://darren-dev141.github.io/joblens/">Open the live demo</a>
+    <a class="btn" href="https://github.com/Darren-dev141/joblens">Code + methodology</a>
+  </div>
+</div>
+
+<h2>More projects</h2>
+<div class="grid">
+  <div class="card">
+    <span class="status">In active development</span>
+    <h3>Switchboard</h3>
+    <p>A central router for AI-agent work: tasks, approvals and receipts in one place, so every automated action leaves a trail a human can audit. Passed a fully keyed end-to-end engineer test (all suites green).</p>
+    <p class="meta">Systems design · APIs · Test harnesses</p>
+  </div>
+  <div class="card">
+    <span class="status live">Running locally</span>
+    <h3>Omnirouter</h3>
+    <p>A local gateway that routes AI requests across model providers with per-request receipts — which model answered, what it cost, what fell back and why. Built to keep working when any single provider caps out.</p>
+    <p class="meta">Python · API integration · Observability</p>
+  </div>
+  <div class="card">
+    <span class="status live">Running locally</span>
+    <h3>Laya</h3>
+    <p>A local decision engine for classification and ranking tasks, with calibration checks against human judgment. Benchmarked honestly: strong where its picks match human calls, and measured — not hidden — where it diverges.</p>
+    <p class="meta">Python · Decision systems · Evaluation</p>
+  </div>
+  <div class="card">
+    <span class="status">Open source</span>
+    <h3>Agent Action Auditor</h3>
+    <p>An open-source tool that reviews what AI agents actually did — actions, approvals, side effects — against what they were asked to do. Entered in the GitLab Transcend hackathon.</p>
+    <p class="meta">Python · Auditing · Open source</p>
+  </div>
+</div>
+
+<h2>Earlier projects</h2>
+<div class="card">
+  <p style="margin:0">
+    <a href="https://github.com/Darren-dev141/digit-recognizer-android"><strong>digit-recognizer-android</strong></a> — on-device handwritten digit recognition (TensorFlow Lite)<br>
+    <a href="https://github.com/Darren-dev141/face-censor"><strong>face-censor</strong></a> — face detection and censoring in video (OpenCV, PyQt6)<br>
+    <a href="https://github.com/Darren-dev141/nlp-chatbot"><strong>nlp-chatbot</strong></a> — TF-IDF question-answering chatbot (NLTK, scikit-learn)<br>
+    <a href="https://github.com/Darren-dev141/news-search"><strong>news-search</strong></a> — command-line article search (NewsAPI)<br>
+    <a href="https://github.com/Darren-dev141/stock-dashboard"><strong>stock-dashboard</strong></a> — Yahoo Finance downloader with a Streamlit dashboard
+  </p>
+</div>
+
+<h2>Skills</h2>
+<div class="skills">
+  <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Power BI</span><span class="chip">Salesforce CRM</span>
+  <span class="chip">Data Analysis</span><span class="chip">Data Validation</span><span class="chip">Data Automation</span>
+  <span class="chip">Excel</span><span class="chip">HTML / CSS / JavaScript</span><span class="chip">Dashboard Design</span>
+  <span class="chip">Business Analysis</span><span class="chip">CRM Reporting</span><span class="chip">Technical Writing</span>
+</div>
+
+<h2>Experience</h2>
+<div class="card exp">
+  <h3>Constellation Energy</h3>
+  <p class="meta">Business Development Specialist (contract) · Quantitative Analytics Intern</p>
+  <p>Salesforce/CRM data work, reporting, and Python/SQL automation supporting business development and quantitative analytics teams.</p>
+  <h3 style="margin-top:20px">Customer operations</h3>
+  <p class="meta">Walmart · Target · Chick-fil-A</p>
+  <p>Front-line customer service — the habit of explaining things plainly started here.</p>
+</div>
+
+<h2>Education</h2>
+<div class="card exp">
+  <h3>University of Maryland, Baltimore County (UMBC)</h3>
+  <p class="meta">B.S. Information Systems, May 2026</p>
+</div>
+
+<footer>
+  Built and maintained by Darren Foote · Code: <a href="https://github.com/Darren-dev141">github.com/Darren-dev141</a> · Connect: <a href="https://www.linkedin.com/in/darren-foote-jr/">linkedin.com/in/darren-foote-jr</a>
+</footer>
+</div>
+</body>
+</html>
