@@ -3,67 +3,87 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#100f0e">
+<meta name="theme-color" content="#12211a">
 <meta name="description" content="Darren Foote's digital garden — interlinked notes at declared maturity stages: seedling, budding, evergreen. A plant's stage is its evidence, not its age. Instruments, experiments, readings, ventures — tended in public.">
 <meta property="og:title" content="Darren Foote — Digital Garden">
 <meta property="og:description" content="Notes at declared maturity. A plant's stage is its evidence, not its age. Most of this garden is young, and it says so.">
 <meta property="og:type" content="website">
 <title>Darren Foote — Digital Garden</title>
 <style>
-:root{color-scheme:dark;--bg:#100f0e;--panel:#16140f;--ink:#ece7db;--muted:#a79d87;--faint:#7e7663;--rule:#3a352a;--rule2:#272219;--acc:#ff4d1c;--mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;--disp:"Helvetica Neue",Helvetica,Arial,sans-serif}
-*{box-sizing:border-box;border-radius:0!important}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--disp);line-height:1.6;font-size:16.5px}
-a{color:var(--acc)}a:hover{text-decoration:underline}
-.wrap{max-width:1020px;margin:0 auto;padding:0 22px 70px}
-.topbar{max-width:1020px;margin:0 auto;padding:13px 22px;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;letter-spacing:2px;text-transform:uppercase}
-.topbar .brand{color:var(--ink)}
-.topbar nav a{color:var(--muted);text-decoration:none;margin-left:18px}
-.topbar nav a:hover{color:var(--ink)}
-.cat{font-family:var(--mono);font-size:11.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--acc);border:1px solid var(--rule);border-left:6px solid var(--acc);padding:9px 12px;margin:34px 0 30px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
-h1{font-size:clamp(52px,10vw,116px);line-height:.92;margin:0;font-weight:800;letter-spacing:-2.5px;text-transform:uppercase}
-h1 .no{color:var(--acc)}
-.subtitle{font-size:clamp(20px,3.4vw,30px);color:var(--ink);margin:16px 0 6px;font-weight:700;letter-spacing:-.3px}
-.byline{font-family:var(--mono);font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--faint);margin:0 0 26px}
-.method{font-family:var(--mono);font-size:13.5px;color:#cfc8b4;border:1px dashed var(--rule);padding:14px 16px;line-height:1.7;max-width:860px}
+@font-face{font-family:'Clash Display';src:url('assets/fonts/clash-display-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Clash Display';src:url('assets/fonts/clash-display-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Clash Display';src:url('assets/fonts/clash-display-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Zodiak';src:url('assets/fonts/zodiak-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Zodiak';src:url('assets/fonts/zodiak-400i.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'Zodiak';src:url('assets/fonts/zodiak-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Zodiak';src:url('assets/fonts/zodiak-700i.woff2') format('woff2');font-weight:700;font-style:italic;font-display:swap}
+:root{color-scheme:dark;--bg:#12211a;--panel:#1a2c21;--inset:#0c1712;--ink:#f1ead9;--body:#ddd5c0;--sage:#a9b69c;--faint:#8b9a80;--rule:#33503d;--rule2:#243a2c;--acc:#f0b52c;--accink:#17251b;--disp:'Clash Display','Avenir Next','Segoe UI',sans-serif;--serif:'Zodiak',Georgia,'Times New Roman',serif;--mono:ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scrollbar-color:#3d5c47 var(--bg)}
+::-webkit-scrollbar{width:11px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:#3d5c47;border-radius:6px;border:2px solid var(--bg)}
+::selection{background:var(--acc);color:var(--accink)}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:2px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);line-height:1.7;font-size:17px}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--acc);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--acc)}
+.mk{width:1.02em;height:1.02em;vertical-align:-.14em;color:var(--acc);flex:none}
+.topbar{max-width:1120px;margin:0 auto;padding:15px 22px 13px;border-bottom:1px solid var(--rule2);display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;font-family:var(--disp);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.topbar .brand{color:var(--ink);font-weight:600;text-decoration:none}
+.topbar nav a{color:var(--sage);text-decoration:none;margin-left:20px;font-weight:500}
+.topbar nav a:hover{color:var(--acc)}
+.cat{font-family:var(--disp);font-weight:500;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);border-bottom:1px solid var(--rule);padding:0 0 12px;margin:30px 0 34px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 18px}
+.cat span:last-child{color:var(--ink)}
+footer{margin-top:56px;border-top:1px solid var(--rule);padding-top:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-family:var(--disp);font-size:11.5px;color:var(--faint);letter-spacing:.05em;line-height:1.7}
+footer a{color:var(--sage)}
+
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px 72px}
+.cat{margin-top:26px}
+.mast-rule{height:2px;background:var(--acc);margin:36px 0 22px;transform-origin:left center;animation:grow .9s cubic-bezier(.16,1,.3,1) both}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (prefers-reduced-motion: reduce){.mast-rule{animation:none}}
+h1{font-family:var(--disp);font-weight:600;font-size:clamp(58px,10.5vw,124px);line-height:.94;margin:0;letter-spacing:-.025em}
+h1 .no{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em}
+.subtitle{font-size:clamp(21px,3.2vw,29px);color:var(--ink);margin:20px 0 8px;font-weight:400;line-height:1.35;max-width:30ch}
+.byline{font-family:var(--disp);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin:0 0 30px}
+.method{font-size:18px;color:var(--body);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:20px 0;line-height:1.75;max-width:68ch;margin:0}
 .method b{color:var(--ink)}
-.legend{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0 8px}
-@media(max-width:860px){.legend{grid-template-columns:1fr}}
-.stage{background:var(--panel);border:1px solid var(--rule2);border-top:4px solid var(--acc);padding:14px 16px 12px}
-.stage .g{font-size:26px;line-height:1}
-.stage .t{font-family:var(--mono);font-size:11.5px;letter-spacing:2px;text-transform:uppercase;color:var(--acc);display:block;margin:8px 0 7px}
-.stage p{margin:0;font-size:14.5px;color:#cfc8b4;line-height:1.6}
-.btns{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 6px}
-.btn{display:inline-block;padding:12px 20px;border:1px solid var(--rule);color:var(--ink);font-family:var(--mono);font-size:12px;letter-spacing:1.8px;text-transform:uppercase;text-decoration:none}
-.btn:hover{border-color:var(--acc);color:var(--acc);text-decoration:none}
-.btn.primary{background:var(--acc);border-color:var(--acc);color:#100f0e;font-weight:700}
-.btn.primary:hover{background:var(--ink);border-color:var(--ink);color:#100f0e}
-h2{font-family:var(--mono);font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ink);margin:76px 0 6px;border-top:3px solid var(--ink);padding-top:14px}
-.sub{color:var(--muted);font-size:16px;margin:10px 0 22px;max-width:760px}
-.tended{border:1px solid var(--rule2);padding:6px 18px;margin-top:6px}
-.tended .tr{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:11px 0;border-bottom:1px solid var(--rule2);font-size:15px}
-.tended .tr:last-child{border-bottom:0}
-.tended .tr a{color:var(--ink);text-decoration:none;font-weight:700}
+.legend{margin:34px 0 6px;border-top:1px solid var(--rule)}
+.stage{display:grid;grid-template-columns:46px 150px 1fr;gap:6px 18px;align-items:start;padding:17px 0 15px;border-bottom:1px solid var(--rule2)}
+.stage .g{line-height:0;padding-top:2px}
+.stage .g .mk{width:27px;height:27px}
+.stage .t{font-family:var(--disp);font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);padding-top:5px}
+.stage p{margin:0;font-size:16px;color:var(--body);line-height:1.65;max-width:62ch}
+@media(max-width:700px){.stage{grid-template-columns:40px 1fr}.stage p{grid-column:2}}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin:30px 0 4px}
+.btn{display:inline-block;padding:12px 22px;border:1px solid var(--rule);border-radius:999px;color:var(--ink);font-family:var(--disp);font-weight:500;font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
+.btn:hover{border-color:var(--acc);color:var(--acc)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:var(--accink);font-weight:600}
+.btn.primary:hover{background:var(--ink);border-color:var(--ink);color:var(--accink)}
+h2{font-family:var(--disp);font-weight:600;font-size:clamp(24px,3.4vw,32px);letter-spacing:-.015em;color:var(--ink);margin:88px 0 4px;border-top:1px solid var(--rule);padding-top:20px}
+.sub{color:var(--sage);font-size:17.5px;font-style:italic;margin:8px 0 24px;max-width:64ch;line-height:1.6}
+.tended{border-top:1px solid var(--rule2)}
+.tended .tr{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:13px 0;border-bottom:1px solid var(--rule2);font-size:16px;align-items:baseline}
+.tended .tr a{color:var(--ink);text-decoration:none;font-family:var(--disp);font-weight:600;font-size:16.5px;letter-spacing:-.005em}
 .tended .tr a:hover{color:var(--acc)}
-.tended .tr .w{color:var(--muted)}
-.tended .tr .d{font-family:var(--mono);font-size:11.5px;color:var(--acc);letter-spacing:1.5px;padding-top:4px;white-space:nowrap}
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px}
-@media(max-width:860px){.cards{grid-template-columns:1fr}}
-.card{background:var(--panel);border:1px solid var(--rule2);border-top:4px solid var(--acc);padding:16px 18px 14px}
-.card .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--acc);display:flex;justify-content:space-between;gap:8px;margin-bottom:9px}
-.card h3{margin:0 0 7px;font-size:22px;font-weight:800;letter-spacing:-.4px;line-height:1.15}
+.tended .tr .w{color:var(--sage)}
+.tended .tr .d{font-family:var(--mono);font-size:11.5px;color:var(--acc);letter-spacing:.1em;white-space:nowrap}
+.cards{border-top:1px solid var(--rule2);margin-top:4px}
+.card{display:grid;grid-template-columns:96px minmax(0,1fr) auto;grid-template-rows:auto auto auto;column-gap:20px;padding:20px 0 18px;border-bottom:1px solid var(--rule2)}
+.card .tag{display:contents}
+.card .tag span:first-child{grid-column:1;grid-row:1/span 3;font-family:var(--mono);font-size:11.5px;color:var(--faint);letter-spacing:.06em;padding-top:7px}
+.card .tag span:last-child{grid-column:3;grid-row:1;justify-self:end;display:inline-flex;align-items:center;gap:7px;font-family:var(--disp);font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);padding-top:5px;white-space:nowrap}
+.card h3{grid-column:2;grid-row:1;margin:0;font-family:var(--disp);font-weight:600;font-size:23px;letter-spacing:-.01em;line-height:1.16}
 .card h3 a{color:var(--ink);text-decoration:none}
 .card h3 a:hover{color:var(--acc)}
-.card p{margin:0 0 11px;color:#cfc9b8;font-size:15px;line-height:1.6}
-.card .meta{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.6px;line-height:1.7;text-transform:uppercase}
-.card .meta b{color:var(--muted);font-weight:400}
-.liner{margin-top:80px;border-top:1px solid var(--rule);padding-top:18px;font-size:12.8px;color:var(--faint);line-height:1.85;max-width:860px}
-.liner .lh{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px}
-.liner b{color:var(--muted)}
-.liner a{color:var(--muted)}
-.policy{border:1px solid var(--rule);padding:13px 16px;font-family:var(--mono);font-size:12.5px;color:#cfc8b4;margin:18px 0;line-height:1.7}
-footer{margin-top:44px;border-top:1px solid var(--rule);padding-top:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-family:var(--mono);font-size:11.5px;color:var(--faint);letter-spacing:.6px}
-footer a{color:var(--muted)}
+.card p{grid-column:2;grid-row:2;margin:7px 0 0;color:var(--body);font-size:16px;line-height:1.65;max-width:62ch}
+.card .meta{grid-column:2;grid-row:3;font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.04em;margin-top:10px;text-transform:uppercase}
+.card .meta b{color:var(--sage);font-weight:400}
+@media(max-width:700px){.card{grid-template-columns:auto 1fr;grid-template-rows:auto auto auto auto}.card .tag span:first-child{grid-column:1;grid-row:1}.card .tag span:last-child{grid-column:2;grid-row:1}.card h3{grid-column:1/-1;grid-row:2;margin-top:8px}.card p{grid-column:1/-1;grid-row:3}.card .meta{grid-column:1/-1;grid-row:4}}
+.liner{margin-top:88px;border-top:1px solid var(--rule);padding-top:20px;font-size:15.5px;color:var(--sage);line-height:1.8;max-width:72ch}
+.liner .lh{font-family:var(--disp);font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);display:block;margin-bottom:9px}
+.liner b{color:var(--ink)}
+.liner a{color:var(--sage)}
+.policy{border:1px solid var(--rule);border-radius:14px;padding:15px 18px;font-size:15px;font-style:italic;color:var(--body);margin:20px 0;line-height:1.7}
 </style>
 </head>
 <body>
@@ -72,6 +92,7 @@ footer a{color:var(--muted)}
 
 <div class="cat"><span>A digital garden</span><span>Planted Oct 22, 2026</span><span>Owings Mills, MD</span></div>
 
+<div class="mast-rule" aria-hidden="true"></div>
 <h1>Digital<br><span class="no">Garden</span></h1>
 <p class="subtitle">Notes, grown in public — organized by connection, not by date.</p>
 <p class="byline">Darren Foote · data analyst · builder of decision systems</p>
@@ -79,9 +100,9 @@ footer a{color:var(--muted)}
 <p class="method"><b>How this garden works:</b> every plant is a note at a <b>declared maturity stage</b>, and the stage is set by its evidence — not its age, not its polish. A plant moves up only when its evidence does. When a claim's evidence dies, the plant gets dug up, and the digging is recorded in the <a href="garden-log.html">garden log</a>. Most of this garden is young. It says so on every label.</p>
 
 <div class="legend">
-  <div class="stage"><span class="g">🌱</span><span class="t">Seedling</span><p>One source, untested — or an open question. Interesting enough to plant, not yet strong enough to lean on.</p></div>
-  <div class="stage"><span class="g">🌿</span><span class="t">Budding</span><p>Tested once, or one real result on the record. It survived contact with reality a single time.</p></div>
-  <div class="stage"><span class="g">🌳</span><span class="t">Evergreen</span><p>Survived falsification or replication — pre-registered predictions, controls, or a proof. The load-bearing plants.</p></div>
+  <div class="stage"><span class="g"><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2v-9"/><path d="M12 12.2c0-3.4-2.5-5.7-6.4-6 .3 3.9 2.7 6.2 6.4 6Z"/><path d="M12 9.8c.1-3.1 2.2-5.2 5.9-5.4-.2 3.7-2.3 5.7-5.9 5.4Z"/></svg></span><span class="t">Seedling</span><p>One source, untested — or an open question. Interesting enough to plant, not yet strong enough to lean on.</p></div>
+  <div class="stage"><span class="g"><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2V9.4"/><circle cx="12" cy="6.3" r="2.8"/><path d="M12 14.6c0 3.1-2.3 5.2-5.9 5.5.3-3.6 2.5-5.6 5.9-5.5Z"/><path d="M12 17.4c.1-2.7 1.9-4.5 5.1-4.7-.2 3.2-2 4.9-5.1 4.7Z"/></svg></span><span class="t">Budding</span><p>Tested once, or one real result on the record. It survived contact with reality a single time.</p></div>
+  <div class="stage"><span class="g"><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2V9.5"/><path d="M12 13.5 7.2 9.8"/><path d="m12 11.5 4.8-3.7"/><path d="M12 9.5 8.6 5.9"/><path d="m12 9.5 3.4-3.6"/><path d="M7.2 9.8 5.4 6.4"/><path d="m16.8 7.8 1.8-3.4"/></svg></span><span class="t">Evergreen</span><p>Survived falsification or replication — pre-registered predictions, controls, or a proof. The load-bearing plants.</p></div>
 </div>
 
 <div class="btns">
@@ -93,29 +114,29 @@ footer a{color:var(--muted)}
 <h2>Recently tended</h2>
 <p class="sub">Everything below was planted or worked on Oct 22, 2026 — a single day that included a census, a buyback, a formal proof, and a falsification pass over the operator's own records.</p>
 <div class="tended">
-  <div class="tr"><span><a href="plants/definition-swap-census.html">The Meaning Is in the Options</a> <span class="w">— 🌳 the census reached its final numbers; paper draft v0 written</span></span><span class="d">OCT 22</span></div>
-  <div class="tr"><span><a href="plants/buyback.html">The Buyback</a> <span class="w">— 🌳 pilot run on pre-registered predictions; all three confirmed</span></span><span class="d">OCT 22</span></div>
-  <div class="tr"><span><a href="plants/run-001.html">RUN-001</a> <span class="w">— 🌳 the Buyback's stake ledger, proven in Verus; broken variant refused</span></span><span class="d">OCT 22</span></div>
-  <div class="tr"><span><a href="plants/chamber.html">The Chamber</a> <span class="w">— 🌿 Session 001: 19 breaks found in rehearsal before they could cost anything</span></span><span class="d">OCT 22</span></div>
-  <div class="tr"><span><a href="plants/incursion.html">The Incursion Problem</a> <span class="w">— 🌱 planted tonight: competing world models, one lifeboat, no Doom</span></span><span class="d">OCT 22</span></div>
+  <div class="tr"><span><a href="plants/definition-swap-census.html">The Meaning Is in the Options</a> <span class="w">— <svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2V9.5"/><path d="M12 13.5 7.2 9.8"/><path d="m12 11.5 4.8-3.7"/><path d="M12 9.5 8.6 5.9"/><path d="m12 9.5 3.4-3.6"/><path d="M7.2 9.8 5.4 6.4"/><path d="m16.8 7.8 1.8-3.4"/></svg> the census reached its final numbers; paper draft v0 written</span></span><span class="d">OCT 22</span></div>
+  <div class="tr"><span><a href="plants/buyback.html">The Buyback</a> <span class="w">— <svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2V9.5"/><path d="M12 13.5 7.2 9.8"/><path d="m12 11.5 4.8-3.7"/><path d="M12 9.5 8.6 5.9"/><path d="m12 9.5 3.4-3.6"/><path d="M7.2 9.8 5.4 6.4"/><path d="m16.8 7.8 1.8-3.4"/></svg> pilot run on pre-registered predictions; all three confirmed</span></span><span class="d">OCT 22</span></div>
+  <div class="tr"><span><a href="plants/run-001.html">RUN-001</a> <span class="w">— <svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2V9.5"/><path d="M12 13.5 7.2 9.8"/><path d="m12 11.5 4.8-3.7"/><path d="M12 9.5 8.6 5.9"/><path d="m12 9.5 3.4-3.6"/><path d="M7.2 9.8 5.4 6.4"/><path d="m16.8 7.8 1.8-3.4"/></svg> the Buyback's stake ledger, proven in Verus; broken variant refused</span></span><span class="d">OCT 22</span></div>
+  <div class="tr"><span><a href="plants/chamber.html">The Chamber</a> <span class="w">— <svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2V9.4"/><circle cx="12" cy="6.3" r="2.8"/><path d="M12 14.6c0 3.1-2.3 5.2-5.9 5.5.3-3.6 2.5-5.6 5.9-5.5Z"/><path d="M12 17.4c.1-2.7 1.9-4.5 5.1-4.7-.2 3.2-2 4.9-5.1 4.7Z"/></svg> Session 001: 19 breaks found in rehearsal before they could cost anything</span></span><span class="d">OCT 22</span></div>
+  <div class="tr"><span><a href="plants/incursion.html">The Incursion Problem</a> <span class="w">— <svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2v-9"/><path d="M12 12.2c0-3.4-2.5-5.7-6.4-6 .3 3.9 2.7 6.2 6.4 6Z"/><path d="M12 9.8c.1-3.1 2.2-5.2 5.9-5.4-.2 3.7-2.3 5.7-5.9 5.4Z"/></svg> planted tonight: competing world models, one lifeboat, no Doom</span></span><span class="d">OCT 22</span></div>
 </div>
 
 <h2 id="beds">Bed 1 — Instruments</h2>
 <p class="sub">Machines that run. Each described the way it describes itself: with the hardest true number first.</p>
 <div class="cards">
-  <div class="card"><span class="tag"><span>Plot I—01</span><span>🌿 Budding</span></span>
+  <div class="card"><span class="tag"><span>Plot I—01</span><span><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2V9.4"/><circle cx="12" cy="6.3" r="2.8"/><path d="M12 14.6c0 3.1-2.3 5.2-5.9 5.5.3-3.6 2.5-5.6 5.9-5.5Z"/><path d="M12 17.4c.1-2.7 1.9-4.5 5.1-4.7-.2 3.2-2 4.9-5.1 4.7Z"/></svg> Budding</span></span>
     <h3><a href="plants/laya-divergence-guard.html">Laya + Divergence Guard</a></h3>
     <p>A local decision server — and the second system whose only job is catching the first one repeating a call its operator already rejected. 11,192 decisions on the log; 96.5% of rejected calls re-asserted on retest.</p>
     <div class="meta">Planted <b>Sep 2026</b> · Tended <b>Oct 22, 2026</b></div></div>
-  <div class="card"><span class="tag"><span>Plot I—02</span><span>🌿 Budding</span></span>
+  <div class="card"><span class="tag"><span>Plot I—02</span><span><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2V9.4"/><circle cx="12" cy="6.3" r="2.8"/><path d="M12 14.6c0 3.1-2.3 5.2-5.9 5.5.3-3.6 2.5-5.6 5.9-5.5Z"/><path d="M12 17.4c.1-2.7 1.9-4.5 5.1-4.7-.2 3.2-2 4.9-5.1 4.7Z"/></svg> Budding</span></span>
     <h3><a href="plants/omnirouter.html">Switchboard / Omnirouter</a></h3>
     <p>A local router for AI traffic with a receipt on every call: which model was asked, which actually served, what fell back. The claim is not that every lane is healthy — it's that the receipts exist.</p>
     <div class="meta">Planted <b>Oct 18, 2026</b> · Tended <b>Oct 22, 2026</b></div></div>
-  <div class="card"><span class="tag"><span>Plot I—03</span><span>🌿 Budding</span></span>
+  <div class="card"><span class="tag"><span>Plot I—03</span><span><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2V9.4"/><circle cx="12" cy="6.3" r="2.8"/><path d="M12 14.6c0 3.1-2.3 5.2-5.9 5.5.3-3.6 2.5-5.6 5.9-5.5Z"/><path d="M12 17.4c.1-2.7 1.9-4.5 5.1-4.7-.2 3.2-2 4.9-5.1 4.7Z"/></svg> Budding</span></span>
     <h3><a href="plants/qd-rec.html">QD-Rec</a></h3>
     <p>A quality-diversity recommender that reads research papers and writes a judged hypothesis for each: why this paper, for this researcher, what to do with it. First run complete: 34 entries on file.</p>
     <div class="meta">Planted <b>Oct 22, 2026</b> · Tended <b>Oct 22, 2026</b></div></div>
-  <div class="card"><span class="tag"><span>Plot I—04</span><span>🌿 Budding</span></span>
+  <div class="card"><span class="tag"><span>Plot I—04</span><span><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2V9.4"/><circle cx="12" cy="6.3" r="2.8"/><path d="M12 14.6c0 3.1-2.3 5.2-5.9 5.5.3-3.6 2.5-5.6 5.9-5.5Z"/><path d="M12 17.4c.1-2.7 1.9-4.5 5.1-4.7-.2 3.2-2 4.9-5.1 4.7Z"/></svg> Budding</span></span>
     <h3><a href="plants/joblens.html">JobLens</a></h3>
     <p>Is this job posting still real? JobLens follows a listing back to the employer's own site and records what it finds. On Oct 22 the same standard was turned on its operator's own feed — and the feed failed it.</p>
     <div class="meta">Planted <b>Oct 2026</b> · Tended <b>Oct 22, 2026</b></div></div>
@@ -124,31 +145,31 @@ footer a{color:var(--muted)}
 <h2>Bed 2 — Experiments</h2>
 <p class="sub">Tests built to be able to fail. Pre-registered where it matters, scored in the open either way.</p>
 <div class="cards">
-  <div class="card"><span class="tag"><span>Plot E—01</span><span>🌳 Evergreen</span></span>
+  <div class="card"><span class="tag"><span>Plot E—01</span><span><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2V9.5"/><path d="M12 13.5 7.2 9.8"/><path d="m12 11.5 4.8-3.7"/><path d="M12 9.5 8.6 5.9"/><path d="m12 9.5 3.4-3.6"/><path d="M7.2 9.8 5.4 6.4"/><path d="m16.8 7.8 1.8-3.4"/></svg> Evergreen</span></span>
     <h3><a href="plants/definition-swap-census.html">The Meaning Is in the Options</a></h3>
     <p>A definition-swap census of a production decision system: swap the definitions behind a judge's labels, keep the labels, and count how many decisions reverse. 85.8% did. Paper draft v0 exists.</p>
     <div class="meta">Planted <b>Oct 15, 2026</b> · Tended <b>Oct 22, 2026</b></div></div>
-  <div class="card"><span class="tag"><span>Plot E—02</span><span>🌳 Evergreen</span></span>
+  <div class="card"><span class="tag"><span>Plot E—02</span><span><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2V9.5"/><path d="M12 13.5 7.2 9.8"/><path d="m12 11.5 4.8-3.7"/><path d="M12 9.5 8.6 5.9"/><path d="m12 9.5 3.4-3.6"/><path d="M7.2 9.8 5.4 6.4"/><path d="m16.8 7.8 1.8-3.4"/></svg> Evergreen</span></span>
     <h3><a href="plants/buyback.html">The Buyback</a></h3>
     <p>A decision system made to repurchase its own past decisions at prices set by its recorded confidence — while an adversarial re-judgment decides which picks survive. 74.2% of the stake burned.</p>
     <div class="meta">Planted <b>Oct 22, 2026</b> · Tended <b>Oct 22, 2026</b></div></div>
-  <div class="card"><span class="tag"><span>Plot E—03</span><span>🌳 Evergreen</span></span>
+  <div class="card"><span class="tag"><span>Plot E—03</span><span><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2V9.5"/><path d="M12 13.5 7.2 9.8"/><path d="m12 11.5 4.8-3.7"/><path d="M12 9.5 8.6 5.9"/><path d="m12 9.5 3.4-3.6"/><path d="M7.2 9.8 5.4 6.4"/><path d="m16.8 7.8 1.8-3.4"/></svg> Evergreen</span></span>
     <h3><a href="plants/run-001.html">RUN-001 — First Formal Verification</a></h3>
     <p>The Buyback's stake ledger, proven in Verus for all inputs: stake is never created or destroyed silently. The deliberately broken variant was refused by the prover. 25 verified, 0 errors.</p>
     <div class="meta">Planted <b>Oct 22, 2026</b> · Tended <b>Oct 22, 2026</b></div></div>
-  <div class="card"><span class="tag"><span>Plot E—04</span><span>🌿 Budding</span></span>
+  <div class="card"><span class="tag"><span>Plot E—04</span><span><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2V9.4"/><circle cx="12" cy="6.3" r="2.8"/><path d="M12 14.6c0 3.1-2.3 5.2-5.9 5.5.3-3.6 2.5-5.6 5.9-5.5Z"/><path d="M12 17.4c.1-2.7 1.9-4.5 5.1-4.7-.2 3.2-2 4.9-5.1 4.7Z"/></svg> Budding</span></span>
     <h3><a href="plants/chamber.html">The Chamber</a></h3>
     <p>A hyperbolic time chamber for AI failure: logged production decisions replayed under swapped, corrupted, and silenced evidence, so failures happen in rehearsal first. Session 001: 19 breaks.</p>
     <div class="meta">Planted <b>Oct 22, 2026</b> · Tended <b>Oct 22, 2026</b></div></div>
-  <div class="card"><span class="tag"><span>Plot E—05</span><span>🌿 Budding</span></span>
+  <div class="card"><span class="tag"><span>Plot E—05</span><span><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2V9.4"/><circle cx="12" cy="6.3" r="2.8"/><path d="M12 14.6c0 3.1-2.3 5.2-5.9 5.5.3-3.6 2.5-5.6 5.9-5.5Z"/><path d="M12 17.4c.1-2.7 1.9-4.5 5.1-4.7-.2 3.2-2 4.9-5.1 4.7Z"/></svg> Budding</span></span>
     <h3><a href="plants/field-recording.html">Field Recording №1</a></h3>
     <p>One day of machine logs, arranged only — 50 verbatim excerpts, each traced to its source line. The tape the rest of this garden grew out of.</p>
     <div class="meta">Planted <b>Oct 22, 2026</b> · Tended <b>Oct 22, 2026</b></div></div>
-  <div class="card"><span class="tag"><span>Plot E—06</span><span>🌱 Seedling</span></span>
+  <div class="card"><span class="tag"><span>Plot E—06</span><span><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2v-9"/><path d="M12 12.2c0-3.4-2.5-5.7-6.4-6 .3 3.9 2.7 6.2 6.4 6Z"/><path d="M12 9.8c.1-3.1 2.2-5.2 5.9-5.4-.2 3.7-2.3 5.7-5.9 5.4Z"/></svg> Seedling</span></span>
     <h3><a href="plants/is-pata-002.html">IS-PATA-002 — The Limits of Imagination</a></h3>
     <p>Can an AI notice that its idea of the possible is fenced in by its own vocabulary? First pilot: the exception-first strategy failed its own pre-registered test. Reported, self-audited — labeled exactly that.</p>
     <div class="meta">Planted <b>Oct 22, 2026</b> · Tended <b>Oct 22, 2026</b></div></div>
-  <div class="card"><span class="tag"><span>Plot E—07</span><span>🌱 Seedling</span></span>
+  <div class="card"><span class="tag"><span>Plot E—07</span><span><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2v-9"/><path d="M12 12.2c0-3.4-2.5-5.7-6.4-6 .3 3.9 2.7 6.2 6.4 6Z"/><path d="M12 9.8c.1-3.1 2.2-5.2 5.9-5.4-.2 3.7-2.3 5.7-5.9 5.4Z"/></svg> Seedling</span></span>
     <h3><a href="plants/incursion.html">The Incursion Problem</a></h3>
     <p>Hundreds of competing world models; when two make incompatible claims, an incursion forces a falsifiable confrontation. Survivors' fragments recombine. The open problem: no Doctor Doom.</p>
     <div class="meta">Planted <b>Oct 22, 2026</b> · Tended <b>Oct 22, 2026</b></div></div>
@@ -157,15 +178,15 @@ footer a{color:var(--muted)}
 <h2>Bed 3 — Readings</h2>
 <p class="sub">Papers read in full — not the abstract, not a summary of a summary. Each note carries what the paper actually showed and what it didn't.</p>
 <div class="cards">
-  <div class="card"><span class="tag"><span>Plot R—01</span><span>🌱 Seedling</span></span>
+  <div class="card"><span class="tag"><span>Plot R—01</span><span><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2v-9"/><path d="M12 12.2c0-3.4-2.5-5.7-6.4-6 .3 3.9 2.7 6.2 6.4 6Z"/><path d="M12 9.8c.1-3.1 2.2-5.2 5.9-5.4-.2 3.7-2.3 5.7-5.9 5.4Z"/></svg> Seedling</span></span>
     <h3><a href="plants/reading-pseudo-formalization.html">Pseudo-Formalization for Proof Verification</a></h3>
     <p>Barkallah et al. — break a proof into blocks, verify each, re-anchor to the source. Beats a plain judge — and both still miss about 40% of known errors. Read in full, 57 pages.</p>
     <div class="meta">Planted <b>Oct 22, 2026</b> · Tended <b>Oct 22, 2026</b></div></div>
-  <div class="card"><span class="tag"><span>Plot R—02</span><span>🌱 Seedling</span></span>
+  <div class="card"><span class="tag"><span>Plot R—02</span><span><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2v-9"/><path d="M12 12.2c0-3.4-2.5-5.7-6.4-6 .3 3.9 2.7 6.2 6.4 6Z"/><path d="M12 9.8c.1-3.1 2.2-5.2 5.9-5.4-.2 3.7-2.3 5.7-5.9 5.4Z"/></svg> Seedling</span></span>
     <h3><a href="plants/reading-mflow.html">MFlow — Pixel Diffusion, Rethought</a></h3>
     <p>Mukhopadhyay et al. — the fix for a real defect the headline metric is blind to: high-frequency detail restored at identical FID. A lesson in measuring what your metric can't see.</p>
     <div class="meta">Planted <b>Oct 22, 2026</b> · Tended <b>Oct 22, 2026</b></div></div>
-  <div class="card"><span class="tag"><span>Plot R—03</span><span>🌱 Seedling</span></span>
+  <div class="card"><span class="tag"><span>Plot R—03</span><span><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2v-9"/><path d="M12 12.2c0-3.4-2.5-5.7-6.4-6 .3 3.9 2.7 6.2 6.4 6Z"/><path d="M12 9.8c.1-3.1 2.2-5.2 5.9-5.4-.2 3.7-2.3 5.7-5.9 5.4Z"/></svg> Seedling</span></span>
     <h3><a href="plants/reading-predictive-closure.html">Predictive Closure — What a JEPA Keeps</a></h3>
     <p>Levy, Lidayan &amp; Goldberg — a feature earns its place by what it adds to a set's power to predict itself. Elegant; tested against our own problems, it doesn't transfer. The note says why.</p>
     <div class="meta">Planted <b>Oct 22, 2026</b> · Tended <b>Oct 22, 2026</b></div></div>
@@ -174,11 +195,11 @@ footer a{color:var(--muted)}
 <h2>Bed 4 — Ventures</h2>
 <p class="sub">Programs and formats — situations invented on purpose, run in reality where possible.</p>
 <div class="cards">
-  <div class="card"><span class="tag"><span>Plot V—01</span><span>🌱 Seedling</span></span>
+  <div class="card"><span class="tag"><span>Plot V—01</span><span><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2v-9"/><path d="M12 12.2c0-3.4-2.5-5.7-6.4-6 .3 3.9 2.7 6.2 6.4 6Z"/><path d="M12 9.8c.1-3.1 2.2-5.2 5.9-5.4-.2 3.7-2.3 5.7-5.9 5.4Z"/></svg> Seedling</span></span>
     <h3><a href="plants/inventing-situations.html">Inventing Situations</a></h3>
     <p>The research program: don't argue about a system — arrange the circumstances where an alternative version of it briefly exists, and measure. The Buyback was its first executed instance.</p>
     <div class="meta">Planted <b>Oct 22, 2026</b> · Tended <b>Oct 22, 2026</b></div></div>
-  <div class="card"><span class="tag"><span>Plot V—02</span><span>🌱 Seedling</span></span>
+  <div class="card"><span class="tag"><span>Plot V—02</span><span><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2v-9"/><path d="M12 12.2c0-3.4-2.5-5.7-6.4-6 .3 3.9 2.7 6.2 6.4 6Z"/><path d="M12 9.8c.1-3.1 2.2-5.2 5.9-5.4-.2 3.7-2.3 5.7-5.9 5.4Z"/></svg> Seedling</span></span>
     <h3><a href="plants/reality-drops.html">Reality Drops</a></h3>
     <p>MSCHF for reality itself: a deliberately constructed alteration to ordinary life — a 72-hour job market, one block run from the future, a department for impossible things. Proposals, not yet executed.</p>
     <div class="meta">Planted <b>Oct 22, 2026</b> · Tended <b>Oct 22, 2026</b></div></div>
