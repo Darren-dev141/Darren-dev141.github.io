@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#100f0e">
+<meta name="description" content="QD-Rec — a quality-diversity paper recommender. Every recommendation is a judged hypothesis, kept, replaced, or discarded in the open.">
+<title>QD-Rec — Darren Foote's Garden</title>
+<style>
+:root{color-scheme:dark;--bg:#100f0e;--panel:#16140f;--ink:#ece7db;--muted:#a79d87;--faint:#7e7663;--rule:#3a352a;--rule2:#272219;--acc:#ff4d1c;--mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;--disp:"Helvetica Neue",Helvetica,Arial,sans-serif}
+*{box-sizing:border-box;border-radius:0!important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--disp);line-height:1.65;font-size:16.5px}
+a{color:var(--acc)}a:hover{text-decoration:underline}
+.wrap{max-width:860px;margin:0 auto;padding:0 22px 70px}
+.topbar{max-width:1020px;margin:0 auto;padding:13px 22px;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;letter-spacing:2px;text-transform:uppercase}
+.topbar .brand{color:var(--ink)}
+.topbar nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+.topbar nav a:hover{color:var(--ink)}
+.cat{font-family:var(--mono);font-size:11.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--acc);border:1px solid var(--rule);border-left:6px solid var(--acc);padding:9px 12px;margin:34px 0 30px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+h1{font-size:clamp(36px,6.5vw,58px);line-height:.98;margin:0 0 10px;font-weight:800;letter-spacing:-1.2px}
+.dek{font-size:19px;color:var(--ink);font-weight:700;margin:0 0 24px;max-width:720px}
+.spec{border:1px solid var(--rule2);display:grid;grid-template-columns:repeat(4,1fr);margin:0 0 30px}
+@media(max-width:760px){.spec{grid-template-columns:1fr 1fr}}
+.spec div{padding:12px 16px 10px;border-left:1px solid var(--rule2)}
+.spec div:first-child{border-left:0}
+.spec .k{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase}
+.spec .v{font-size:17px;font-weight:700;margin-top:4px}
+p{color:#cfc9b8;max-width:760px}
+p b{color:var(--ink)}
+h2{font-family:var(--mono);font-size:12.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ink);margin:44px 0 8px;border-top:3px solid var(--ink);padding-top:13px}
+.stats{display:flex;gap:0;flex-wrap:wrap;border:1px solid var(--rule2);margin:14px 0;max-width:760px}
+.stat{padding:12px 18px 10px;border-left:1px solid var(--rule2);flex:1;min-width:150px}
+.stat:first-child{border-left:0}
+.stat .n{font-size:30px;font-weight:800;line-height:1;letter-spacing:-.5px}
+.stat .n em{font-style:normal;color:var(--acc)}
+.stat .c{font-family:var(--mono);font-size:10.8px;color:var(--muted);letter-spacing:.6px;line-height:1.55;margin-top:6px;text-transform:uppercase}
+.rel{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.rel a{display:inline-block;padding:9px 14px;border:1px solid var(--rule);color:var(--ink);font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none}
+.rel a:hover{border-color:var(--acc);color:var(--acc)}
+.srcs{margin-top:48px;border-top:1px solid var(--rule);padding-top:16px;font-size:13px;color:var(--faint);line-height:1.85;max-width:820px}
+.srcs .lh{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px}
+.srcs a{color:var(--muted)}
+footer{margin-top:34px;border-top:1px solid var(--rule);padding-top:16px;font-family:var(--mono);font-size:11.5px;color:var(--faint);letter-spacing:.6px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="topbar"><span class="brand">D. Foote — Digital Garden</span><nav><a href="../index.html">Garden</a><a href="../garden-log.html">Garden Log</a><a href="https://github.com/Darren-dev141">GitHub</a><a href="https://www.linkedin.com/in/darren-foote-jr/">LinkedIn</a></nav></div>
+<div class="wrap">
+
+<div class="cat"><span>Bed 1 — Instruments</span><span>Plot I—03</span><span>🌿 Budding</span></div>
+
+<h1>QD-Rec</h1>
+<p class="dek">A paper recommender where every recommendation has to argue for its place — in writing.</p>
+
+<div class="spec">
+  <div><div class="k">Maturity</div><div class="v">🌿 Budding</div></div>
+  <div><div class="k">Planted</div><div class="v">Oct 22, 2026</div></div>
+  <div><div class="k">Last tended</div><div class="v">Oct 22, 2026</div></div>
+  <div><div class="k">Status</div><div class="v">First run complete</div></div>
+</div>
+
+<p>Most recommenders hand you a ranked list and keep their reasons to themselves. QD-Rec works differently: it's a <b>quality-diversity</b> archive. Each paper that enters has to carry a plain-language <b>hypothesis</b> — why this paper, for this researcher, and what to do with it — and a judge scores the hypothesis before the paper earns its place. Entries can be kept, replaced by a better occupant of the same niche, or discarded. Nothing is dropped silently: replaced and discarded entries stay on file with their reasons.</p>
+<p>The first run worked a NeurIPS 2025 corpus against one research profile (decision models and calibration, agent harnesses, world models, formal verification). It seeded an archive of 10, then ran 24 evaluations, Thompson-sampling which papers to judge next. Every chat and embedding call ran through the local <a href="omnirouter.html">Omnirouter</a> — embeddings computed on the same machine, no paid API.</p>
+
+<div class="stats">
+  <div class="stat"><div class="n">34</div><div class="c">entries on file — 31 active, 1 replaced, 2 discarded, all with reasons</div></div>
+  <div class="stat"><div class="n">24<em>/24</em></div><div class="c">evaluations completed in the first run</div></div>
+  <div class="stat"><div class="n">0</div><div class="c">silent drops — the archive keeps its rejects</div></div>
+</div>
+
+<h2>Why it isn't evergreen</h2>
+<p>One run is one run. The judge that scores the hypotheses is the same class of judge the <a href="definition-swap-census.html">census</a> found wanting, and the archive hasn't yet been tested against the only verdict that matters — whether the researcher actually reads, uses, and cites what it kept. Budding: a real artifact with a real method, awaiting its second season.</p>
+
+<h2>Related plants</h2>
+<div class="rel">
+  <a href="omnirouter.html">🌿 Omnirouter — its road and its power</a>
+  <a href="laya-divergence-guard.html">🌿 Laya — the judge family it borrows</a>
+  <a href="reading-predictive-closure.html">🌱 Predictive Closure — read because the archive surfaced the question</a>
+</div>
+
+<div class="srcs">
+<span class="lh">Sources</span>
+QD-Rec first-run archive, Oct 22, 2026 — 34 entries with per-entry hypotheses and judge notes; run completed 2026-10-22. An earlier edition of this site carried a pool-size figure for this run that the archive doesn't support; it was removed rather than repeated (see the <a href="../garden-log.html">garden log</a>).
+</div>
+
+<footer>
+  <span>© 2026 Darren Foote</span>
+  <span><a href="../index.html">← the garden</a> · Plot I—03</span>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#100f0e">
+<meta name="description" content="Field Recording №1 — one day of machine logs, arranged only: 50 verbatim excerpts, each traced to its source line.">
+<title>Field Recording №1 — Darren Foote's Garden</title>
+<style>
+:root{color-scheme:dark;--bg:#100f0e;--panel:#16140f;--ink:#ece7db;--muted:#a79d87;--faint:#7e7663;--rule:#3a352a;--rule2:#272219;--acc:#ff4d1c;--mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;--disp:"Helvetica Neue",Helvetica,Arial,sans-serif}
+*{box-sizing:border-box;border-radius:0!important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--disp);line-height:1.65;font-size:16.5px}
+a{color:var(--acc)}a:hover{text-decoration:underline}
+.wrap{max-width:860px;margin:0 auto;padding:0 22px 70px}
+.topbar{max-width:1020px;margin:0 auto;padding:13px 22px;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;letter-spacing:2px;text-transform:uppercase}
+.topbar .brand{color:var(--ink)}
+.topbar nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+.topbar nav a:hover{color:var(--ink)}
+.cat{font-family:var(--mono);font-size:11.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--acc);border:1px solid var(--rule);border-left:6px solid var(--acc);padding:9px 12px;margin:34px 0 30px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+h1{font-size:clamp(36px,6.5vw,58px);line-height:.98;margin:0 0 10px;font-weight:800;letter-spacing:-1.2px}
+.dek{font-size:19px;color:var(--ink);font-weight:700;margin:0 0 24px;max-width:720px}
+.spec{border:1px solid var(--rule2);display:grid;grid-template-columns:repeat(4,1fr);margin:0 0 30px}
+@media(max-width:760px){.spec{grid-template-columns:1fr 1fr}}
+.spec div{padding:12px 16px 10px;border-left:1px solid var(--rule2)}
+.spec div:first-child{border-left:0}
+.spec .k{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase}
+.spec .v{font-size:17px;font-weight:700;margin-top:4px}
+p{color:#cfc9b8;max-width:760px}
+p b{color:var(--ink)}
+h2{font-family:var(--mono);font-size:12.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ink);margin:44px 0 8px;border-top:3px solid var(--ink);padding-top:13px}
+.stats{display:flex;gap:0;flex-wrap:wrap;border:1px solid var(--rule2);margin:14px 0;max-width:760px}
+.stat{padding:12px 18px 10px;border-left:1px solid var(--rule2);flex:1;min-width:150px}
+.stat:first-child{border-left:0}
+.stat .n{font-size:30px;font-weight:800;line-height:1;letter-spacing:-.5px}
+.stat .n em{font-style:normal;color:var(--acc)}
+.stat .c{font-family:var(--mono);font-size:10.8px;color:var(--muted);letter-spacing:.6px;line-height:1.55;margin-top:6px;text-transform:uppercase}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 4px}
+.btn{display:inline-block;padding:11px 18px;border:1px solid var(--rule);color:var(--ink);font-family:var(--mono);font-size:11.5px;letter-spacing:1.8px;text-transform:uppercase;text-decoration:none}
+.btn:hover{border-color:var(--acc);color:var(--acc)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#100f0e;font-weight:700}
+.btn.primary:hover{background:var(--ink);border-color:var(--ink);color:#100f0e}
+.rel{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.rel a{display:inline-block;padding:9px 14px;border:1px solid var(--rule);color:var(--ink);font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none}
+.rel a:hover{border-color:var(--acc);color:var(--acc)}
+.srcs{margin-top:48px;border-top:1px solid var(--rule);padding-top:16px;font-size:13px;color:var(--faint);line-height:1.85;max-width:820px}
+.srcs .lh{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px}
+.srcs a{color:var(--muted)}
+footer{margin-top:34px;border-top:1px solid var(--rule);padding-top:16px;font-family:var(--mono);font-size:11.5px;color:var(--faint);letter-spacing:.6px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="topbar"><span class="brand">D. Foote — Digital Garden</span><nav><a href="../index.html">Garden</a><a href="../garden-log.html">Garden Log</a><a href="https://github.com/Darren-dev141">GitHub</a><a href="https://www.linkedin.com/in/darren-foote-jr/">LinkedIn</a></nav></div>
+<div class="wrap">
+
+<div class="cat"><span>Bed 2 — Experiments</span><span>Plot E—05</span><span>🌿 Budding</span></div>
+
+<h1>Field Recording №1</h1>
+<p class="dek">Composed from AI chain of thought: one day of machine logs, arranged only — nothing paraphrased, nothing invented.</p>
+
+<div class="spec">
+  <div><div class="k">Maturity</div><div class="v">🌿 Budding</div></div>
+  <div><div class="k">Planted</div><div class="v">Oct 22, 2026</div></div>
+  <div><div class="k">Last tended</div><div class="v">Oct 22, 2026</div></div>
+  <div><div class="k">Status</div><div class="v">Published</div></div>
+</div>
+
+<p>The premise of the whole garden, in one artifact. On Oct 22, 2026, the systems in Bed 1 spent the day being falsified — a job feed audited against employers' own lists, a decision ledger checked against the inbox, a router's receipts read against its health check. Field Recording №1 is that day, kept: <b>50 verbatim excerpts</b> from the day's machine logs, in six movements, cuts marked […], every excerpt carrying its source beneath it.</p>
+<p>The rule it demonstrates is the garden's rule: <b>summaries never replace originals.</b> Any claim anywhere in this garden traces back to tape like this. When two excerpts were found altered in assembly, they were rebuilt from the logs and re-verified — the recording keeps its own corrections, too.</p>
+
+<div class="stats">
+  <div class="stat"><div class="n">50</div><div class="c">excerpts, each traced to its source log line</div></div>
+  <div class="stat"><div class="n">6</div><div class="c">movements — morning gates to evening falsification</div></div>
+  <div class="stat"><div class="n">1</div><div class="c">day — Oct 22, 2026</div></div>
+</div>
+
+<div class="btns">
+  <a class="btn primary" href="../field-recording-001.html">Read the full tape</a>
+  <a class="btn" href="../field-recording-edition.html">The edition it headlined</a>
+</div>
+
+<h2>Why it isn't evergreen</h2>
+<p>It's one day, verified against its own logs — a single, well-kept record, not a replicated finding. Evergreen here waits for №2: a second day recorded the same way, by the same standard, without knowing in advance what it will contain.</p>
+
+<h2>Related plants</h2>
+<div class="rel">
+  <a href="joblens.html">🌿 JobLens — the feed on the tape</a>
+  <a href="omnirouter.html">🌿 Omnirouter — the receipts on the tape</a>
+  <a href="laya-divergence-guard.html">🌿 Laya — the judge on the tape</a>
+</div>
+
+<div class="srcs">
+<span class="lh">Sources</span>
+Field Recording №1, Oct 22, 2026 — sources drawn from the router receipts log, the decision log, the divergence-flag log, the failure database, the feed falsification report, and the QD-Rec archive, all dated Oct 22, 2026. Excerpt mix: falsification report 13 · decision log 11 · failure database 8 · QD-Rec 7 · receipts 6 · divergence flags 5.
+</div>
+
+<footer>
+  <span>© 2026 Darren Foote</span>
+  <span><a href="../index.html">← the garden</a> · Plot E—05</span>
+</footer>
+</div>
+</body>
+</html>

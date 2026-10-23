@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#100f0e">
+<meta name="description" content="RUN-001 — the first formal verification run: the Buyback's stake ledger proven in Verus, for all inputs. The broken variant was refused.">
+<title>RUN-001 — Darren Foote's Garden</title>
+<style>
+:root{color-scheme:dark;--bg:#100f0e;--panel:#16140f;--ink:#ece7db;--muted:#a79d87;--faint:#7e7663;--rule:#3a352a;--rule2:#272219;--acc:#ff4d1c;--mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;--disp:"Helvetica Neue",Helvetica,Arial,sans-serif}
+*{box-sizing:border-box;border-radius:0!important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--disp);line-height:1.65;font-size:16.5px}
+a{color:var(--acc)}a:hover{text-decoration:underline}
+.wrap{max-width:860px;margin:0 auto;padding:0 22px 70px}
+.topbar{max-width:1020px;margin:0 auto;padding:13px 22px;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;letter-spacing:2px;text-transform:uppercase}
+.topbar .brand{color:var(--ink)}
+.topbar nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+.topbar nav a:hover{color:var(--ink)}
+.cat{font-family:var(--mono);font-size:11.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--acc);border:1px solid var(--rule);border-left:6px solid var(--acc);padding:9px 12px;margin:34px 0 30px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+h1{font-size:clamp(36px,6.5vw,58px);line-height:.98;margin:0 0 10px;font-weight:800;letter-spacing:-1.2px}
+.dek{font-size:19px;color:var(--ink);font-weight:700;margin:0 0 24px;max-width:720px}
+.spec{border:1px solid var(--rule2);display:grid;grid-template-columns:repeat(4,1fr);margin:0 0 30px}
+@media(max-width:760px){.spec{grid-template-columns:1fr 1fr}}
+.spec div{padding:12px 16px 10px;border-left:1px solid var(--rule2)}
+.spec div:first-child{border-left:0}
+.spec .k{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase}
+.spec .v{font-size:17px;font-weight:700;margin-top:4px}
+p{color:#cfc9b8;max-width:760px}
+p b{color:var(--ink)}
+.prop{font-family:var(--mono);font-size:13.5px;color:#cfc8b4;border:1px dashed var(--rule);padding:14px 16px;line-height:1.75;max-width:820px;margin:18px 0}
+.prop b{color:var(--ink)}
+h2{font-family:var(--mono);font-size:12.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ink);margin:44px 0 8px;border-top:3px solid var(--ink);padding-top:13px}
+.stats{display:flex;gap:0;flex-wrap:wrap;border:1px solid var(--rule2);margin:14px 0;max-width:760px}
+.stat{padding:12px 18px 10px;border-left:1px solid var(--rule2);flex:1;min-width:150px}
+.stat:first-child{border-left:0}
+.stat .n{font-size:30px;font-weight:800;line-height:1;letter-spacing:-.5px}
+.stat .n em{font-style:normal;color:var(--acc)}
+.stat .c{font-family:var(--mono);font-size:10.8px;color:var(--muted);letter-spacing:.6px;line-height:1.55;margin-top:6px;text-transform:uppercase}
+.rel{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.rel a{display:inline-block;padding:9px 14px;border:1px solid var(--rule);color:var(--ink);font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none}
+.rel a:hover{border-color:var(--acc);color:var(--acc)}
+.srcs{margin-top:48px;border-top:1px solid var(--rule);padding-top:16px;font-size:13px;color:var(--faint);line-height:1.85;max-width:820px}
+.srcs .lh{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px}
+.srcs a{color:var(--muted)}
+footer{margin-top:34px;border-top:1px solid var(--rule);padding-top:16px;font-family:var(--mono);font-size:11.5px;color:var(--faint);letter-spacing:.6px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="topbar"><span class="brand">D. Foote — Digital Garden</span><nav><a href="../index.html">Garden</a><a href="../garden-log.html">Garden Log</a><a href="https://github.com/Darren-dev141">GitHub</a><a href="https://www.linkedin.com/in/darren-foote-jr/">LinkedIn</a></nav></div>
+<div class="wrap">
+
+<div class="cat"><span>Bed 2 — Experiments</span><span>Plot E—03</span><span>🌳 Evergreen</span></div>
+
+<h1>RUN-001 — First Formal Verification</h1>
+<p class="dek">One property, proven for all inputs — and a broken twin, refused, to prove the proof has teeth.</p>
+
+<div class="spec">
+  <div><div class="k">Maturity</div><div class="v">🌳 Evergreen</div></div>
+  <div><div class="k">Planted</div><div class="v">Oct 22, 2026</div></div>
+  <div><div class="k">Last tended</div><div class="v">Oct 22, 2026</div></div>
+  <div><div class="k">Status</div><div class="v">Property holds</div></div>
+</div>
+
+<p>The method, per the local formal-verification discipline: draw the statechart first, pick the <b>one riskiest property</b>, and use the tool that fits it. For the <a href="buyback.html">Buyback</a>, the riskiest property is the money math — the failure class that the same week's falsification passes kept finding elsewhere: counts that didn't reconcile with their own receipts.</p>
+
+<div class="prop"><b>The property:</b> stake is never created or destroyed silently — for any sequence of records and re-judgments, total burned never exceeds total staked; each decision's burn is all-or-nothing (0 or its full stake); and surviving stake always equals staked minus burned, exactly — globally and per schema.</div>
+
+<p>The tool was <b>Verus</b>, because the property has to hold for <i>all</i> inputs — arbitrary ledger lengths, schema ids, stakes, flip patterns — not up to a test bound. The ledger was encoded integer-only, no floats. Verdict on the honest implementation: <b>25 verified, 0 errors</b>. Then the teeth test: an identical copy with one line changed, so a flip burns only half the stake and quietly credits the rest back. The prover refused it — <i>postcondition not satisfied</i>, 24 verified, 1 error. A proof that can't reject the broken version isn't evidence; this one can and did. The rerun suite requires both outcomes, and it passes.</p>
+
+<div class="stats">
+  <div class="stat"><div class="n">25</div><div class="c">verified, 0 errors — the honest ledger</div></div>
+  <div class="stat"><div class="n">1</div><div class="c">error, correctly raised — the half-burn variant</div></div>
+  <div class="stat"><div class="n">∀</div><div class="c">all inputs — a proof, not a test bound</div></div>
+</div>
+
+<h2>The honest gaps</h2>
+<p>The proof covers a <b>reference implementation</b> written for this run — not the pilot's ad-hoc computation, and no conformance replay has yet checked the two against each other. The seat thresholds the ledger enforces are policy, not theorem: what's proven is that the tallies reconcile, not that the thresholds are wise. And coverage is out of scope by construction — a decision that never reaches the ledger is invisible to the proof. The next run's target is already named: the decision engine's own Rust core.</p>
+
+<h2>Related plants</h2>
+<div class="rel">
+  <a href="buyback.html">🌳 The Buyback — the ledger it proves</a>
+  <a href="definition-swap-census.html">🌳 The census — the other evergreen method</a>
+  <a href="laya-divergence-guard.html">🌿 Laya — RUN-002's named target</a>
+</div>
+
+<div class="srcs">
+<span class="lh">Sources</span>
+Formal verification RUN-001 report, Oct 22, 2026 — Verus v0.2026.10.18; honest ledger "verification results:: 25 verified, 0 errors"; broken variant "24 verified, 1 errors" (postcondition not satisfied); rerun suite: SUITE PASS. Scenario verified statically inside the proof file: staked 1,750,000 / burned 500,000 / surviving 1,250,000 (integer micro-units).
+</div>
+
+<footer>
+  <span>© 2026 Darren Foote</span>
+  <span><a href="../index.html">← the garden</a> · Plot E—03</span>
+</footer>
+</div>
+</body>
+</html>
